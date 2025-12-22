@@ -1,7 +1,4 @@
 // just so I dont have to recode a huge part of the main code
-if (window.__SUPA_HUB__) return;
-window.__SUPA_HUB__ = true;
-
 window.GM_addStyle = css => {
     const s = document.createElement("style");
     s.textContent = css;
@@ -18,6 +15,8 @@ window.unsafeWindow = window;
 
 (function () {
     'use strict';
+    if (window.__SUPA_HUB__) return;
+    window.__SUPA_HUB__ = true;
 
     let localUser = { username: '', coins: 0, avatar: '', id: '' };
     let allGamesPool = [];
@@ -662,5 +661,6 @@ window.unsafeWindow = window;
             }
         }, 800);
     });
+
 
 })();
